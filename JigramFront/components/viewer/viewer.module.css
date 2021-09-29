@@ -1,0 +1,112 @@
+.viewPost{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.back{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.back:hover{
+    cursor: pointer;
+}
+
+.front{
+    z-index: 1;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentImg{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+.contentTexts{
+    width: 50%;
+    height: 100%;
+    border : 1px solid lightgray;
+    background-color: white;
+}
+
+
+.title{
+    padding: 0.5rem;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.titleImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.userNickname{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.main{
+    height: 30%;
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.mainTitle{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.userContent{
+    font-size: 0.8rem;
+}
+
+.comments{
+    height: 150px;
+    overflow-y: scroll;
+    border-bottom: 1px solid lightgray;
+}
+
+.addComment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.addCommentText{
+    width: 80%;
+    height: 80px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    resize: none;
+}
+
+.addCommentBtn{
+    width: 100%;
+    height: 30px;
+    border : none;
+    background-color: rgb(135, 135, 248);
+    color:white;
+}
+
+.addCommentBtn:hover{
+    cursor: pointer;
+    background-color: blue;
+}

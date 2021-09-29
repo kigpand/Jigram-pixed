@@ -1,0 +1,21 @@
+.list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    border : 1px solid lightgray;
+    padding: 0.5rem 0;
+    background-color: white;
+}
+
+.profileImg{
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+    border-radius: 50%;
+}
+
+.nickname:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

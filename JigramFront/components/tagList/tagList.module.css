@@ -1,0 +1,10 @@
+.list{
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+.tag{
+    font-size: 0.7rem;
+    color: blue;
+    margin-right: 1rem;
+}

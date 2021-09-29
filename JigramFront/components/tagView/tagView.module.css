@@ -1,0 +1,25 @@
+
+.tagView{
+    padding-top: 50px;
+}
+
+.title{
+    font-size: 2rem;
+    margin: 3rem 0 3rem 10rem;
+    color: blue;
+    font-family: Wemakeprice-Bold;
+}
+
+.list{
+    margin : 50px 200px 0 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@font-face {
+    font-family: 'Wemakeprice-Bold';
+    src: url('/font/Wemakeprice-Bold.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

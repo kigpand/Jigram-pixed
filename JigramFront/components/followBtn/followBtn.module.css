@@ -1,0 +1,13 @@
+.follow{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color : blue;
+    background-color:white;
+    outline: none;
+}
+
+.follow:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}

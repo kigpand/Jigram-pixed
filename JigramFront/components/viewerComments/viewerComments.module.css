@@ -1,0 +1,15 @@
+.viewerComments{
+    display: flex;
+    padding: 0.5rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.id{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.comments{
+    font-size: 0.8rem;
+}

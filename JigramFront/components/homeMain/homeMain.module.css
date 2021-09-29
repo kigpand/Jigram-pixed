@@ -1,0 +1,19 @@
+.homeMain{
+    padding-top: 50px;
+}
+
+.contents{
+    margin : 50px 200px 0 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.loading{
+    position: fixed;
+    bottom : 1rem;
+    right: 1rem;
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+}

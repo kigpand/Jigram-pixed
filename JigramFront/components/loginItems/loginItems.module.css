@@ -1,0 +1,57 @@
+.loginItems{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img{
+    margin-top: 20%;
+    width: 40px;
+    height: 40px;
+}
+
+.title{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.inputText{
+    margin-top: 1rem;
+    width: 80%;
+    height: 40px;
+    border : 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.loginBtn{
+    margin-top: 1rem;
+    width: 80%;
+    height: 40px;
+    border : none;
+    outline: none;
+    background-color: skyblue;
+    color:white;
+    border-radius: 4px;
+}
+
+.others{
+    width: 80%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.findPw,
+.join{
+    color:blue;
+    font-size: 0.5rem;
+}
+
+.loginBtn:hover,
+.findPw:hover,
+.others:hover{
+    cursor: pointer;
+}

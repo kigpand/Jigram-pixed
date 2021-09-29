@@ -1,0 +1,16 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.loginImg{
+    width: 70%;
+    height: 100%;
+}
+
+.loginItems{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+}
