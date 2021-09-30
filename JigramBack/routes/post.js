@@ -32,20 +32,6 @@ const upload = multer({
     limits: { fileSize: 20 * 1024 * 1024 },
 });
 
-// const upload = multer({
-//     storage: multer.diskStorage({
-//         destination(req,file,done){
-//             done(null,'uploads');
-//         },
-//         filename(req, file, done){
-//             const ext = path.extname(file.originalname);
-//             const basename = path.basename(file.originalname, ext);
-//             done(null, basename + new Date().getTime() + ext);
-//         }
-//     }),
-//     limits: { fileSize: 20 * 1024 * 1024 },
-// });
-
 router.post('/', isLoggedIn, upload.none(), async (req, res, next)=>{ // POST /post
     try{
         const post = await Post.create({
@@ -121,9 +107,7 @@ router.delete('/:postid', isLoggedIn, async (req, res, next)=>{ //DELETE /post
 
 //한장만 올릴거면 upload.single
 router.post('/images', isLoggedIn, upload.array('image'), async(req,res,next)=>{
-    console.log(req.files);
-    // res.json(req.files.map((v) => v.location));
-    res.json(req.files.map((v)=> v.filename));
+    res.json(req.files.map((v) => v.location));
 });
 
 module.exports = router;

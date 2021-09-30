@@ -35,20 +35,6 @@ const upload = multer({
     limits: { fileSize: 20 * 1024 * 1024 },
 })
 
-// const upload = multer({
-//     storage: multer.diskStorage({
-//         destination(req,file,done){
-//             done(null,'uploads');
-//         },
-//         filename(req, file, done){
-//             const ext = path.extname(file.originalname);
-//             const basename = path.basename(file.originalname, ext);
-//             done(null, basename + new Date().getTime() + ext);
-//         }
-//     }),
-//     limits: { fileSize: 20 * 1024 * 1024 },
-// });
-
 
 router.get('/', async (req, res, next) =>{
     try{
@@ -243,8 +229,7 @@ router.post('/find', isLoggedIn, async (req,res,next)=>{
 });
 
 router.post('/image', isLoggedIn, upload.single('image'), (req, res, next)=>{
-    console.log(req.file);
-   res.json(req.file.filename);
+   res.json(req.file.location);
 });
 
 module.exports = router;
