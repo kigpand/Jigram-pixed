@@ -36,7 +36,7 @@ else{
 }
 
 app.use(cors({
-    origin: ['http://localhost:3000','Jigram.com','http://jigram.co.kr', 'http://54.180.202.180'],
+    origin: ['http://localhost:3000','Jigram.com','http://jigram.co.kr', 'http://54.180.202.180/'],
     credentials : true,
 }));
 
