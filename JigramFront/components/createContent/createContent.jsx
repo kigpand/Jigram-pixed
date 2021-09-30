@@ -89,7 +89,7 @@ const CreateContent = () => {
         <div className = {styles.createContent}>                
             <div className = {styles.container}>
                 <div className = {styles.userInfo}>
-                    <img src={me.userImg ? `${me.userImg}` : '/profileImg.png'} className = {styles.img}></img>
+                    <img src={me.userImg ? `/${me.userImg}` : '/profileImg.png'} className = {styles.img}></img>
                     <div className = {styles.nickname}>{me.nickname}</div>
                 </div>
                 <div className ={styles.uploadImg}>

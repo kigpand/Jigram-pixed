@@ -19,7 +19,7 @@ const FollowerList = ({ data, id}) => {
     
     return (
         <div className = {styles.list}>
-            <img src = {data.userImg ? `http://localhost:3080/${data.userImg}` : '/profileImg.png'} className  = {styles.profileImg}></img>
+            <img src = {data.userImg ? `/${data.userImg}` : '/profileImg.png'} className  = {styles.profileImg}></img>
             <div className = {styles.nickname} onClick ={onNickClick}>{data.nickname}</div>
             { userView && <FollowUserView setUserView = {setUserView}/>}
         </div>
