@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { backUrl } from '../../config/config';
 import { FIND_OTHER_REQUEST, UNFOLLOW_REQUEST } from '../../reducers/user';
 import FollowUserView from '../followUserView/followUserView';
 import styles from './followingList.module.css';
@@ -27,7 +26,7 @@ const FollowingList = ({ data, id}) => {
 
     return (
         <div className = {styles.list}>
-            <img src = {data.userImg ? `${backUrl}/${data.userImg}` : '/profileImg.png'} className  = {styles.profileImg}></img>
+            <img src = {data.userImg ? `${data.userImg}` : '/profileImg.png'} className  = {styles.profileImg}></img>
             <div className = {styles.nickname} onClick ={onNickClick}>{data.nickname}</div>
             <img src = '/unfollowBtn.png' className = {styles.removeBtn} onClick={OnUnFollow}></img>
             { userView && <FollowUserView setUserView = {setUserView}/>}

@@ -6,7 +6,6 @@ import styles from './viewer.module.css';
 import shortid from 'shortid';
 import FollowBtn from '../followBtn/followBtn';
 import TagList from '../tagList/tagList';
-import { backUrl } from '../../config/config';
 
 
 const Viewer = ({ viewPost }) => {
@@ -55,16 +54,16 @@ const Viewer = ({ viewPost }) => {
         <div className = {styles.viewPost}>
             <div className = {styles.back} onClick = {onCloseView}></div>
             <div className={styles.front}>
-                <img src = {viewPost.Images.length>0 ? `${backUrl}/${viewPost.Images[0].src}` : '/noimg.png'} className = {styles.contentImg}/>
+                <img src = {viewPost.Images.length>0 ? `${viewPost.Images[0].src}` : '/noimg.png'} className = {styles.contentImg}/>
                 <div className = {styles.contentTexts}>
                     <div className = {styles.title}>
-                        <img src = {viewPost.User.userImg ? `${backUrl}/${viewPost.User.userImg}` : '/profileImg.png'} className  = {styles.titleImg}></img>
+                        <img src = {viewPost.User.userImg ? `${viewPost.User.userImg}` : '/profileImg.png'} className  = {styles.titleImg}></img>
                         <div className = {styles.userNickname}>{viewPost.User.nickname}님의 게시글</div>
                         { me.id === viewPost.User.id ? <button onClick = {onDeletePost}>삭제</button> : <FollowBtn post = {viewPost}/>}
                     </div>
                     <div className = {styles.main}>
                         <div className = {styles.mainTitle}>
-                            <img src = {viewPost.User.userImg ? `${backUrl}/${viewPost.User.userImg}` : '/profileImg.png'} className  = {styles.titleImg}></img>
+                            <img src = {viewPost.User.userImg ? `${viewPost.User.userImg}` : '/profileImg.png'} className  = {styles.titleImg}></img>
                             <div className = {styles.userNickname}>{viewPost.User.nickname}</div>
                         </div>
                         <TagList tag = {viewPost.tag}></TagList>

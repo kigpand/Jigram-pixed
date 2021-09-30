@@ -2,7 +2,6 @@ import React, { useCallback, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './createContent.module.css';
 import { ADD_POST_REQUEST, UPLOAD_IMAGES_REQUEST } from '../../reducers/post';
-import { backUrl } from '../../config/config';
 
 const CreateContent = () => {
 
@@ -90,15 +89,14 @@ const CreateContent = () => {
         <div className = {styles.createContent}>                
             <div className = {styles.container}>
                 <div className = {styles.userInfo}>
-                    <img src={me.userImg ? `${backUrl}/${me.userImg}` : '/profileImg.png'} className = {styles.img}></img>
+                    <img src={me.userImg ? `${me.userImg}` : '/profileImg.png'} className = {styles.img}></img>
                     <div className = {styles.nickname}>{me.nickname}</div>
                 </div>
                 <div className ={styles.uploadImg}>
                     <input type = "file" name="image" hidden multiple ref={imgRef} onChange={changeImages}/>
                     <button className={styles.uploadBtn} onClick = {onClickImageUpload}>이미지 업로드</button>
                     {imagePaths.map((data) => {
-                        const src= backUrl + "/" + data;
-                        return <img key={data} src = {src} alt = {data} className={styles.pathImg}/>
+                        return <img key={data} src = {data} alt = {data} className={styles.pathImg}/>
                     })}
                 </div>
                 <div className = {styles.contentBox}>
