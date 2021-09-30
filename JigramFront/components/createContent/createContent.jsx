@@ -89,15 +89,15 @@ const CreateContent = () => {
         <div className = {styles.createContent}>                
             <div className = {styles.container}>
                 <div className = {styles.userInfo}>
-                    <img src={me.userImg ? `/${me.userImg}` : '/profileImg.png'} className = {styles.img}></img>
+                    <img src={me.userImg ? me.userImg : '/profileImg.png'} className = {styles.img}></img>
                     <div className = {styles.nickname}>{me.nickname}</div>
                 </div>
                 <div className ={styles.uploadImg}>
                     <input type = "file" name="image" hidden multiple ref={imgRef} onChange={changeImages}/>
                     <button className={styles.uploadBtn} onClick = {onClickImageUpload}>이미지 업로드</button>
-                    {imagePaths.map((data) => {
-                        return <img key={data} src = {data} alt = {data} className={styles.pathImg}/>
-                    })}
+                    {imagePaths.map((data) => (
+                        <img key={data} src = {data} alt = {data} className={styles.pathImg}/>
+                    ))}
                 </div>
                 <div className = {styles.contentBox}>
                     <textarea className = {styles.content} cols ={20} rows ={20} onChange={onChangeContent}></textarea>

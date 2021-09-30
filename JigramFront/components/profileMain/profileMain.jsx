@@ -64,14 +64,14 @@ const ProfileMain = () => {
         <div className = {styles.profileMain}>
             <div className = {styles.freeView}>
                 <div className = {styles.viewNick}>{me.nickname}</div>
-                <img src = { myImgPath ? `${myImgPath}` : "/profileImg.png"} className = {styles.viewImg}/>
+                <img src = { myImgPath ? myImgPath : "/profileImg.png"} className = {styles.viewImg}/>
                 <div className = {styles.viewEmail}><label>이메일 : </label>{me.email}</div>
                 <div className = {styles.viewPhone}><label>전화 번호 : </label>{me.phone}</div>
             </div>
             <div className = {styles.profile}>
                 <div className = {styles.imgText}>
                     <div clasName = {styles.imgProfile}>
-                        <img src = { myImgPath ? `${myImgPath}` : "/profileImg.png"} className = {styles.profileImage} onClick = {onClickImageUpload}></img>
+                        <img src = { myImgPath ? myImgPath : "/profileImg.png"} className = {styles.profileImage} onClick = {onClickImageUpload}></img>
                         <input type = "file" name='image' hidden ref={imgRef} onChange={changeImages}/>
                     </div>
                     <div className = {styles.texts}>

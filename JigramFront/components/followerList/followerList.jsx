@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { FIND_OTHER_REQUEST } from '../../reducers/user';
 import FollowUserView from '../followUserView/followUserView';
@@ -19,7 +19,7 @@ const FollowerList = ({ data, id}) => {
     
     return (
         <div className = {styles.list}>
-            <img src = {data.userImg ? `/${data.userImg}` : '/profileImg.png'} className  = {styles.profileImg}></img>
+            <img src = {data.userImg ? data.userImg : '/profileImg.png'} className  = {styles.profileImg}></img>
             <div className = {styles.nickname} onClick ={onNickClick}>{data.nickname}</div>
             { userView && <FollowUserView setUserView = {setUserView}/>}
         </div>
