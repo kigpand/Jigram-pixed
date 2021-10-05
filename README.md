@@ -14,3 +14,13 @@
 
 ##### 검색 기능
 <img src="https://user-images.githubusercontent.com/70279943/136039981-df251e54-4249-4f3b-9301-aeca69fc721b.PNG" width="500" height="300">
+
+
+### 기술
++ NextJS로 SSR 구현
++ Redux(+saga)를 통한 상태관리
++ NodeJS + expressJS로 서버 구현 및 MySQL을 통한 DB통신
++ AWS로 호스팅중
+
+---
+#### 발생되는 오류는 지속적으로 수정 
