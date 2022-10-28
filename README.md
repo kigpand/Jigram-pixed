@@ -17,10 +17,9 @@
 
 
 ### 기술
-+ NextJS로 SSR 구현
 + Redux(+saga)를 통한 상태관리
 + NodeJS + expressJS로 서버 구현 및 MySQL을 통한 DB통신
-+ AWS로 호스팅중
-
++ 호스팅 중단중
++ SSR 수정 진행 중
 ---
 #### 발생되는 오류는 지속적으로 수정 중입니다
